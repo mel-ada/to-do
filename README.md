@@ -28,6 +28,7 @@ The App: As a user...
 - [ ] JS Lint finds no mistakes
 - [ ] Follow good Git team behaviors (do all your work on branches & submit pull requests for review before merging to master)
 - [ ] The artifact produced is properly licensed, preferably with the [MIT license](https://opensource.org/licenses/MIT).
+
 #### Stretch Goals/Nice to Have's:
 - [ ] Deploy the app to heroku. 
 - [ ] I can create mulitple lists of to do's.
