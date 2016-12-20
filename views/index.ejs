@@ -1,11 +1,17 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title><%= title="snobbish" %></title>
-    <link rel='stylesheet' href='/stylesheets/style.css' />
+    <title><%= title="To Do List" %></title>
+    <link rel='stylesheet' href='/stylesheets/style.css'/>
+    <link rel='shortcut icon' type='image/x-icon' href='./favicon.ico' />
   </head>
   <body>
     <h1><%= title %></h1>
     <p>Welcome to <%= title %></p>
+    <form>
+      Enter To Do List item:<br>
+      <input type="text" name="to-do-item"><br>
+      <input type="submit" value="Submit">
+    </form>
   </body>
 </html>
