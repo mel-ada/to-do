@@ -1,17 +1,32 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title><%= title="To Do List" %></title>
-    <link rel='stylesheet' href='/stylesheets/style.css'/>
-    <link rel='shortcut icon' type='image/x-icon' href='./favicon.ico' />
-  </head>
-  <body>
+
+<head>
+    <title>
+        <%= title="To Do List" %>
+    </title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+</head>
+
+<body>
     <h1><%= title %></h1>
-    <p>Welcome to <%= title %></p>
-    <form>
-      Enter To Do List item:<br>
-      <input type="text" name="to-do-item"><br>
-      <input type="submit" value="Submit">
+    <p>Welcome to
+        <%= title %>
+    </p>
+    <form method="POST" action="/api/todo" class="store">
+        Enter To Do List item:
+        <br>
+        <input type="text" name="to-do-item">
+        <br>
+        <button type="add" value="add">Add</button>
     </form>
-  </body>
+    <div class="list-body" To-Do>
+        <div class="panel-body">
+            <span class="list-group">
+                <div class="list-group-item" method="GET" action="display"></div>
+            </span>
+        </div>
+    </div>
+</body>
+
 </html>

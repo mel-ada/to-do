@@ -21,16 +21,16 @@ The App: As a user...
 - [ ] I can create to do list items.
 - [ ] I can delete unwanted to do list items.
 - [ ] I can check items off as completed.
-- [ ] I can rearrange to do list items. 
+- [ ] I can rearrange to do list items.
 - [ ] I can edit the text on existing to do's.
 - [ ] Create a database of to do list items.
-- [ ] Create the back end using node and express.
+- [x] Create the back end using node and express.
 - [ ] JS Lint finds no mistakes
 - [ ] Follow good Git team behaviors (do all your work on branches & submit pull requests for review before merging to master)
-- [ ] The artifact produced is properly licensed, preferably with the [MIT license](https://opensource.org/licenses/MIT).
+- [x] The artifact produced is properly licensed, preferably with the [MIT license](https://opensource.org/licenses/MIT).
 
 #### Stretch Goals/Nice to Have's:
-- [ ] Deploy the app to heroku. 
+- [ ] Deploy the app to heroku.
 - [ ] I can create mulitple lists of to do's.
 - [ ] I can log into my account.
 - [ ] Write the app using ES6 and deploy using babel.
