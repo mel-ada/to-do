@@ -17,9 +17,9 @@
     <form method="POST" action="/api/todo" class="store">
         Enter To Do List item:
         <br>
-        <input type="text" name="to-do-item">
+        <input type="text" name="item">
         <br>
-        <button type="add" value="add">Add</button>
+        <button type="submit">Add</button>
     </form>
     <div class="list-body" To-Do>
         <div class="panel-body">
@@ -37,6 +37,9 @@
             </span>
         </div>
         <button type="complete" name="complete">Mark as Complete</button>
+    </div>
+    <div>
+      <button type="delete" name="delete">Delete</button>
     </div>
     <script src="main.js"></script>
 </body>
