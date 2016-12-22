@@ -1,5 +1,5 @@
 const pgp = require('pg-promise')()
-const CONNECTION_STRING = "pg://akuma@localhost:5432/todo"
+const CONNECTION_STRING = "pg://melissamorel@localhost:5432/todo"
 const db = pgp( CONNECTION_STRING )
 
 const getListos = () =>
@@ -13,7 +13,9 @@ const getListos = () =>
 const addItems = task =>
   db.oneOrNone( "INSERT INTO listo (task) VALUES ($1)", [task]);
 
-const removeItems = task =>
-  db.manyOrNone( "DELETE FROM listo WHERE (task) VALUES ($1)", [task]);
+const removeItems = ids =>
+  db.manyOrNone( "DELETE FROM listo WHERE id IN ($1:csv)", [ids]);
+
+//update function
 
 module.exports = { getListos, addItems }

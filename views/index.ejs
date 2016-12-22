@@ -21,28 +21,27 @@
         <button type="submit">Add</button>
     </form>
     <br>
-    <div class="list-body" To-Do>
-        <div class="panel-body">
-            <span class="list-group">
-                <div id="whole">
-                  <% for( let i = 0; i < todos.length; i++ ) { %>
-                    <div>
-                      <input type="checkbox" id="checkbox<%= i %>" />
-                      <label id="<%= i %>" onclick="clicky('<%= i %>')" style="display: inline-block" contentEditable="false" action="edit" method="PUT">
-                      <%= todos[ i ].task %>
-                    </label>
-                    </div>
-                  <% } %>
-              </div>
-            </span>
-        </div>
-        <button type="complete" name="complete">Mark as Complete</button>
-    </div>
-    <form method="DELETE" action="/api/delete">
-      <div>
-        <button type="delete">Delete</button>
+    <form method="POST" action="/api/todo/modify">
+      <div class="list-body" To-Do>
+          <div class="panel-body">
+              <span class="list-group">
+                  <div id="whole">
+                    <% for( let i = 0; i < todos.length; i++ ) { %>
+                      <div>
+                        <input type="checkbox" id="checkbox-<%= todos[ i ].id %>" name="todos" value="<%= todos[ i ].id %>" />
+                        <label id="<%= i %>" onclick="clicky('<%= i %>')" style="display: inline-block" contentEditable="false" action="edit" method="PUT">
+                        <%= todos[ i ].task %>
+                      </label>
+                      </div>
+                    <% } %>
+                </div>
+              </span>
+          </div>
+          <button type="complete" name="complete">Mark as Complete</button>
+          <button type="delete" name="delete">Delete</button>
       </div>
     </form>
+
     <script src="main.js"></script>
 </body>
 
