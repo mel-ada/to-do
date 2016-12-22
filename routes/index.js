@@ -25,9 +25,15 @@ router.post('/api/todo', function(req, res) {
   db.addItems(item).then(() => res.redirect('/'))
 })
 
-router.delete('/api/delete', function(req, res) {
-    console.log('del');
-    then(() => res.redirect('/'))
+router.post('/api/todo/modify', function(request, res) {
+  // Get all the listo IDs
+  console.log( request.body )
+  // Then, ask our db code to delete
+    // Then, redirect to the /
+
+    // console.log('del');
+    // then(() => res.redirect('/'))
+  res.redirect( '/' )
 })
 
 module.exports = router
