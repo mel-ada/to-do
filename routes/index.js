@@ -27,12 +27,20 @@ router.post('/api/todo', function(req, res) {
 
 router.post('/api/todo/modify', function(request, res) {
   // Get all the listo IDs
-  console.log( request.body )
-  // Then, ask our db code to delete
-    // Then, redirect to the /
+  console.log( request.body)
 
-    // console.log('del');
-    // then(() => res.redirect('/'))
+  if('delete' in request.body){
+    console.log("deleting")
+    db.removeItems(request.body.todos)
+
+  }
+  else if ('complete' in request.body){
+    //call complete db function
+    console.log("completing")
+
+  }
+
+  console.log('modify');
   res.redirect( '/' )
 })
 

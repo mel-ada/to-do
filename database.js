@@ -18,4 +18,4 @@ const removeItems = ids =>
 
 //update function
 
-module.exports = { getListos, addItems }
+module.exports = { getListos, addItems, removeItems }
