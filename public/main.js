@@ -8,15 +8,3 @@ function clicky(i) {
         }
     })
 }
-
-function rem() {
-  console.log('deleting')
-    var list = document.getElementById('whole'),
-        items = Array.prototype.slice.call(list.childNodes),
-        item;
-    while (item = items.pop()) {
-        if (item.firstChild && item.firstChild.checked) {
-            list.removeChild(item);
-        }
-    }
-}

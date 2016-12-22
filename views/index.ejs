@@ -29,7 +29,7 @@
                     <% for( let i = 0; i < todos.length; i++ ) { %>
                       <div>
                         <input type="checkbox" id="checkbox-<%= todos[ i ].id %>" name="todos" value="<%= todos[ i ].id %>" />
-                        <label id="<%= i %>" onclick="clicky('<%= i %>')" style="display: inline-block" contentEditable="false" action="edit" method="PUT">
+                        <label id="<%= todos[ i ].id %>" type="edit" name="edit" onclick="clicky('<%= todos[ i ].id %>')" style="display: inline-block" contentEditable="false" action="edit">
                         <%= todos[ i ].task %>
                       </label>
                       </div>
