@@ -5,6 +5,8 @@ function clicky(i) {
         var key = e.which || e.keyCode;
         if (key === 13) {
             it.setAttribute("contentEditable", "false")
+            // making an ajax/fetch request to /api/todo/modify
+            // how to pass that value in fetch request
         }
     })
 }
