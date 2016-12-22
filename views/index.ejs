@@ -22,24 +22,30 @@
     </form>
     <br>
     <form method="POST" action="/api/todo/modify">
-      <div class="list-body" To-Do>
-          <div class="panel-body">
-              <span class="list-group">
+        <div class="list-body" To-Do>
+            <div class="panel-body">
+                <span class="list-group">
                   <div id="whole">
                     <% for( let i = 0; i < todos.length; i++ ) { %>
                       <div>
                         <input type="checkbox" id="checkbox-<%= todos[ i ].id %>" name="todos" value="<%= todos[ i ].id %>" />
-                        <label id="<%= todos[ i ].id %>" type="edit" name="edit" onclick="clicky('<%= todos[ i ].id %>')" style="display: inline-block" contentEditable="false" action="edit">
+                        <% if (todos[i].complete) { %>
+                        <label id="<%= todos[ i ].id %>" type="edit" name="edit" onclick="clicky('<%= todos[ i ].id %>')" style="display: inline-block" contentEditable="false" action="edit" class="completed">
                         <%= todos[ i ].task %>
                       </label>
-                      </div>
-                    <% } %>
-                </div>
-              </span>
-          </div>
-          <button type="complete" name="complete">Mark as Complete</button>
-          <button type="delete" name="delete">Delete</button>
-      </div>
+                <% } else { %>
+                    <label id="<%= todos[ i ].id %>" type="edit" name="edit" onclick="clicky('<%= todos[ i ].id %>')" style="display: inline-block" contentEditable="false" action="edit">
+                      <%= todos[ i ].task %>
+                    </label>
+            </div>
+            <% } %>
+            <% } %>
+        </div>
+        </span>
+        </div>
+        <button type="complete" name="complete">Mark as Complete</button>
+        <button type="delete" name="delete">Delete</button>
+        </div>
     </form>
 
     <script src="main.js"></script>

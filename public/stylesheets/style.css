@@ -7,3 +7,7 @@ body {
 a {
   color: #00B7FF;
 }
+
+.completed {
+  text-decoration: line-through;
+}
