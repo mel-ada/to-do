@@ -13,4 +13,7 @@ const getListos = () =>
 const addItems = task =>
   db.oneOrNone( "INSERT INTO listo (task) VALUES ($1)", [task]);
 
+const removeItems = task =>
+  db.manyOrNone( "DELETE FROM listo WHERE (task) VALUES ($1)", [task]);
+
 module.exports = { getListos, addItems }
